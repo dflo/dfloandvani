@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  box-sizing: border-box;
+  padding-top: 48px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-height: 1000px;
+  object-fit: cover;
+  object-position: bottom;
+}

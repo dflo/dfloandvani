@@ -1,0 +1,17 @@
+<h4 class="intro" i18n>
+  Your presence at the wedding is present enough for us! But, for those of you
+  who are stubborn, we created a wish list...
+</h4>
+
+<mat-grid-list cols="4" gutterSize="24">
+  <mat-grid-tile colspan="2" (click)="openReg('bbb')"
+    ><img src="assets/bbb.png"
+  /></mat-grid-tile>
+  <mat-grid-tile colspan="2" (click)="openReg('target')"
+    ><img src="assets/target.png"
+  /></mat-grid-tile>
+  <mat-grid-tile colspan="1" class="hidden-placeholder"></mat-grid-tile>
+  <mat-grid-tile colspan="2" (click)="openReg('amazon')"
+    ><img src="assets/amazon.png"
+  /></mat-grid-tile>
+</mat-grid-list>
