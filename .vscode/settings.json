@@ -1,0 +1,29 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.tslint": true
+    },
+    "[typescript]": {
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false
+    },
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.detectIndentation": false
+    },
+    "[scss]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.detectIndentation": false
+    },
+    "[json]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
+}

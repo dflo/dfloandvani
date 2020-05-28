@@ -1,0 +1,57 @@
+@import "../theme/color-palette.scss";
+
+$breakpoints: (
+  sm: 719px,
+  gt-sm: 720px,
+  md: 1023px,
+  gt-md: 1024px,
+  lg: 1919px,
+  gt-lg: 1920px,
+);
+
+$xs: map-get($breakpoints, xs);
+$gt-xs: map-get($breakpoints, gt-xs);
+$sm: map-get($breakpoints, sm);
+$gt-sm: map-get($breakpoints, gt-sm);
+$md: map-get($breakpoints, md);
+$gt-md: map-get($breakpoints, gt-md);
+$lg: map-get($breakpoints, lg);
+$gt-lg: map-get($breakpoints, gt-lg);
+
+$small-gutter-size: 16px;
+$gt-small-gutter-size: 24px;
+
+/*
+ *---- COLORS!!! ----
+ */
+
+$black-opacity-100: rgba(0, 0, 0, 1);
+$black-opacity-87: rgba(0, 0, 0, 0.87);
+$black-opacity-60: rgba(0, 0, 0, 0.6);
+$black-opacity-40: rgba(0, 0, 0, 0.4);
+$black-opacity-38: rgba(0, 0, 0, 0.38);
+$black-opacity-10: rgba(0, 0, 0, 0.1);
+
+$white-opacity-100: rgba(255, 255, 255, 1);
+$white-opacity-87: rgba(255, 255, 255, 0.87);
+$white-opacity-60: rgba(255, 255, 255, 0.6);
+$white-opacity-38: rgba(255, 255, 255, 0.38);
+
+// Hex #333333
+$grey-opacity-100: rgba(51, 51, 51, 1);
+$grey-opacity-87: rgba(51, 51, 51, 0.87);
+$grey-opacity-60: rgba(51, 51, 51, 0.6);
+$grey-opacity-50: rgba(51, 51, 51, 0.5);
+$grey-opacity-38: rgba(51, 51, 51, 0.38);
+$grey-opacity-10: rgba(51, 51, 51, 0.1);
+
+$gray-opacity-100: $grey-opacity-100;
+$gray-opacity-87: $grey-opacity-87;
+$gray-opacity-60: $grey-opacity-60;
+$gray-opacity-50: $grey-opacity-50;
+$gray-opacity-38: $grey-opacity-38;
+$gray-opacity-10: $grey-opacity-10;
+
+// Primary colors
+$primary: map-get($navy, 900);
+$accent: map-get($wine, 900);

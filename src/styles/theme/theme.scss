@@ -1,0 +1,10 @@
+@import "~@angular/material/theming";
+@import "color-palette.scss";
+
+@include mat-core();
+
+$primary: mat-palette($navy, 900);
+$accent: mat-palette($wine, 900);
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
