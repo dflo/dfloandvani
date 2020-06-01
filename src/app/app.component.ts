@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 
 import { AppMedia } from './core/models/app-media';
 import { AppMediaService } from './core/services/app-media.service';
+import { Countdown } from './models/countdown';
 
 @Component({
   selector: 'app-root',
