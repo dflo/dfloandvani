@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-shower',
   templateUrl: './shower.component.html',
-  styleUrls: ['./shower.component.scss']
+  styleUrls: ['./shower.component.scss'],
 })
 export class ShowerComponent implements OnInit {
+  @Input() showerDate: Date;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

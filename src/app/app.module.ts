@@ -7,13 +7,18 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BaseHttpInterceptor } from './core/services/base-https.interceptor';
-import { AngularSharedModule } from './shared/angular-shared.module';
-import { HomeComponent } from './home/home.component';
 import { RegistryComponent } from './registry/registry.component';
+import { AngularSharedModule } from './shared/angular-shared.module';
 import { ShowerComponent } from './shower/shower.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, RegistryComponent, ShowerComponent],
+  declarations: [
+    AppComponent,
+    WelcomeComponent,
+    RegistryComponent,
+    ShowerComponent,
+  ],
   imports: [
     // Core
     CommonModule,

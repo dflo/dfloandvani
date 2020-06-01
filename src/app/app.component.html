@@ -1,14 +1,22 @@
+<img class="roses upper-left" src="assets/redroses.png" />
+<img class="roses lower-right" src="assets/redroses.png" />
 <div class="background">
   <div class="page">
     <header>
-      <div class="mat-display-2" i18n>Damaso & Vanessa</div>
+      <div class="mat-display-2">Damaso & Vanessa</div>
     </header>
     <div class="content">
-      <mat-tab-group mat-stretch-tabs color="accent">
-        <mat-tab label="Home"><app-home></app-home></mat-tab>
-        <mat-tab label="Shower"><app-shower></app-shower></mat-tab>
+      <mat-tab-group mat-stretch-tabs dynamicHeight color="accent">
+        <mat-tab label="Welcome"
+          ><app-welcome
+            [weddingDate]="weddingDate"
+            [countdown]="countdown$ | async"
+          ></app-welcome
+        ></mat-tab>
+        <mat-tab label="Shower"
+          ><app-shower [showerDate]="showerDate"></app-shower
+        ></mat-tab>
         <mat-tab label="Registry"><app-registry></app-registry></mat-tab>
-        <mat-tab label="RSVP">RSVP...</mat-tab>
       </mat-tab-group>
     </div>
   </div>

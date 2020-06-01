@@ -3,6 +3,24 @@
 }
 
 .content {
-  margin: 64px auto;
+  margin: 64px auto 0;
   width: fit-content;
+  text-align: center;
+}
+
+h1.title {
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.date-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-top: 48px;
 }
