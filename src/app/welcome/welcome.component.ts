@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { Countdown } from '../models/countdown';
+
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',

@@ -1,4 +1,4 @@
-interface Countdown {
+export interface Countdown {
   days: number;
   hours: number;
   mins: number;
