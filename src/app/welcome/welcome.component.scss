@@ -1,0 +1,33 @@
+@import "helpers";
+
+:host {
+  display: block;
+}
+
+.content {
+  margin-top: 64px;
+  text-align: center;
+}
+
+h1.title {
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+h1.wedding-date {
+  margin-bottom: 64px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h3.welcome {
+  max-width: 410px;
+  margin: 32px auto 0;
+}
+
+mat-divider {
+  margin: 32px auto;
+}

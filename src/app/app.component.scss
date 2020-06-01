@@ -4,10 +4,31 @@
   display: block;
 }
 
+.roses {
+  display: block;
+  position: fixed;
+
+  &.upper-left {
+    top: 0;
+    left: -95px;
+    @include rotate(90deg);
+  }
+
+  &.lower-right {
+    right: -95px;
+    bottom: 0;
+    @include rotate(-90deg);
+  }
+
+  @media only screen and (max-width: 1399px) {
+    display: none;
+  }
+}
+
 .background {
   display: flex;
   min-height: 100%;
-  background-color: #293446;
+  background-color: $primary;
 
   .page {
     display: flex;
@@ -15,10 +36,12 @@
     max-width: 900px;
     width: 100%;
     margin: 0 auto;
+    padding: 64px 0;
     background-color: whitesmoke;
+    z-index: 10;
 
     header {
-      padding-top: 64px;
+      // padding-top: 64px;
       text-align: center;
 
       div.mat-display-2 {
