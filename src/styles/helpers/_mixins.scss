@@ -1,7 +1,46 @@
+@import "variables";
+
 @mixin rotate($deg) {
   -webkit-transform: rotate($deg);
   -moz-transform: rotate($deg);
   -ms-transform: rotate($deg);
   -o-transform: rotate($deg);
   transform: rotate($deg);
+}
+
+@mixin for-sm {
+  @media only screen and (max-width: $sm) {
+    @content;
+  }
+}
+@mixin for-md {
+  @media only screen and (min-width: $gt-sm) and (max-width: $md) {
+    @content;
+  }
+}
+@mixin for-lg {
+  @media only screen and (min-width: $gt-md) and (max-width: $lg) {
+    @content;
+  }
+}
+@mixin for-xl {
+  @media only screen and (min-width: $gt-lg) {
+    @content;
+  }
+}
+
+@mixin for-gt-sm {
+  @media only screen and (min-width: $gt-sm) {
+    @content;
+  }
+}
+@mixin for-gt-md {
+  @media only screen and (min-width: $gt-md) {
+    @content;
+  }
+}
+@mixin for-gt-lg {
+  @media only screen and (min-width: $gt-lg) {
+    @content;
+  }
 }
