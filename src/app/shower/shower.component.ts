@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ShowerComponent implements OnInit {
   @Input() showerDate: Date;
+  @Input() showerEndDate: Date;
 
   constructor() {}
 

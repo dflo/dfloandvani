@@ -12,7 +12,10 @@
           ></app-welcome
         ></mat-tab>
         <mat-tab label="Shower"
-          ><app-shower [showerDate]="showerDate"></app-shower
+          ><app-shower
+            [showerDate]="showerDate"
+            [showerEndDate]="showerEndDate"
+          ></app-shower
         ></mat-tab>
         <mat-tab label="Registry"><app-registry></app-registry></mat-tab>
       </mat-tab-group>

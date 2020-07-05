@@ -15,6 +15,7 @@ import { Countdown } from './models/countdown';
 export class AppComponent implements OnInit {
   weddingDate = new Date('2020-09-12 2:30 PM');
   showerDate = new Date('2020-07-26 3:00 PM');
+  showerEndDate = new Date('2020-07-26 6:00 PM');
   countdown$: Observable<Countdown>;
   appMedia$ = this.appMediaService.appMedia$;
 

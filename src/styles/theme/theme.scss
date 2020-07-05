@@ -3,6 +3,7 @@
 
 $open-sans: mat-typography-config(
   $font-family: "Open Sans",
+  $body-1: mat-typography-level(15px, 22px, 400),
 );
 
 @include mat-base-typography($open-sans);
