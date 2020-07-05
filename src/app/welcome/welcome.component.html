@@ -1,8 +1,15 @@
 <div class="content">
-  <h1 class="mat-display-1 title" i18n>We are getting married!</h1>
-  <h1 class="wedding-date">{{ weddingDate | date: "fullDate" }}</h1>
+  <div class="subheader">
+    <img class="rings" src="assets/rings.svg" />
+    <div class="text">
+      <h1 class="bad-script mat-display-1 title" i18n>
+        We are getting MARRIED!
+      </h1>
+      <h1 class="wedding-date">{{ weddingDate | date: "fullDate" }}</h1>
+    </div>
+  </div>
 
-  <img src="assets/welcome.jpg" />
+  <img class="proposal" src="assets/welcome.jpg" />
 
   <h3 class="welcome" i18n>
     Welcome and thank you for visiting our wedding website! Here you will find
@@ -11,7 +18,7 @@
 
   <mat-divider></mat-divider>
 
-  <h2 class="countdown" i18n>
+  <h2 *ngIf="countdown" class="countdown" i18n>
     {{ countdown.days }} Days {{ countdown.hours }} Hours
     {{ countdown.mins }} Minutes {{ countdown.secs }} Seconds
     {{ countdown.suffix }}

@@ -1,10 +1,25 @@
 @import "~@angular/material/theming";
 @import "color-palette.scss";
 
-@include mat-core();
+$open-sans: mat-typography-config(
+  $font-family: "Open Sans",
+  $body-1: mat-typography-level(15px, 22px, 400),
+);
+
+@include mat-base-typography($open-sans);
+@include mat-core($open-sans);
 
 $primary: mat-palette($navy, 900);
 $accent: mat-palette($wine, 900);
 $theme: mat-light-theme($primary, $accent);
 
 @include angular-material-theme($theme);
+
+$bad-script: mat-typography-config(
+  $font-family: "Bad Script",
+);
+
+h1.mat-display-1.bad-script,
+h1.mat-display-2.bad-script {
+  font-family: mat-font-family($bad-script);
+}

@@ -1,11 +1,24 @@
 <div class="content">
-  <h1 class="mat-display-1 title" i18n>Wedding Shower</h1>
+  <h1 class="bad-script mat-display-1 title" i18n>Wedding Shower</h1>
 
-  <div class="date-time">
-    <h2>{{ showerDate | date: "fullDate" }}</h2>
-    <h2 i18n>{{ showerDate | date: "shortTime" }} - Dusk</h2>
+  <div class="new-plan">
+    <h1>New Plan...</h1>
+    <h2>
+      Out of an abundance of caution for the health & safety of our loved ones,
+      We have decided to host a drive through wedding shower.
+    </h2>
+    <p>
+      Drive by to show your love & support and enjoy curbside favors. In lieu of
+      shopping & transporting gifts, consider a gift card or e-gift card.
+    </p>
   </div>
 
-  <h2 i18n>Veterans Memorial Park - South Holland, IL</h2>
+  <img src="assets/love-car.svg" />
+
+  <h2>
+    8156 Tapper Ave. Munster, IN 46321<br />
+    {{ showerDate | date: "fullDate" }}<br />
+    {{ showerDate | date: "shortTime" }} -
+    {{ showerEndDate | date: "shortTime" }}
+  </h2>
 </div>
-<img src="assets/shower.jpg" />

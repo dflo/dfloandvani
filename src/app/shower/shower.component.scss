@@ -9,18 +9,9 @@
 }
 
 h1.title {
-  text-transform: uppercase;
   margin-bottom: 16px;
 }
 
-.date-time {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  margin-top: 48px;
+.new-plan {
+  max-width: 425px;
 }
