@@ -7,15 +7,18 @@ import { AppMedia } from './core/models/app-media';
 import { AppMediaService } from './core/services/app-media.service';
 import { Countdown } from './models/countdown';
 
+export const JULY = 6;
+export const SEPTEMBER = 8;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  weddingDate = new Date('2020-09-12 2:30 PM');
-  showerDate = new Date('2020-07-26 3:00 PM');
-  showerEndDate = new Date('2020-07-26 6:00 PM');
+  weddingDate = new Date(2020, SEPTEMBER, 12, 14, 30);
+  showerDate = new Date(2020, JULY, 26, 15, 0);
+  showerEndDate = new Date(2020, JULY, 26, 18, 0);
   countdown$: Observable<Countdown>;
   appMedia$ = this.appMediaService.appMedia$;
 
