@@ -31,13 +31,20 @@ export class AppComponent {
   ) {
     const redirectPath = localStorage.getItem('path');
     if (redirectPath) {
-      console.log('path:', redirectPath);
       localStorage.removeItem('path');
       const urlSegments = redirectPath.split('/').filter((s) => !!s);
-      console.log('urlSegments', urlSegments);
-      const rootPath = '/' + urlSegments.join('/');
-      console.log('rootPath', rootPath);
-      this.router.navigate([rootPath]);
+      try {
+        console.log('nav by url segments');
+        this.router.navigate(urlSegments);
+      } catch (error) {
+        if (urlSegments[0] in ['en', 'es']) {
+          console.log('nav by joined url');
+          this.router.navigateByUrl('/' + urlSegments.join('/'));
+        } else {
+          console.log('nav to root');
+          this.router.navigateByUrl('/');
+        }
+      }
     }
   }
 
