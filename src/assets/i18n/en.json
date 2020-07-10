@@ -17,5 +17,9 @@
     },
     "registry": {
         "intro": "Your presence at the wedding is present enough for us! But, for those of you who are stubborn, we created a wish list..."
+    },
+    "ROUTES": {
+        "shower": "shower",
+        "registry": "registry"
     }
 }

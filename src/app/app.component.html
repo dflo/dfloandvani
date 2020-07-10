@@ -11,21 +11,18 @@
       <h1 class="bad-script mat-display-2">Damaso & Vanessa</h1>
     </header>
     <div class="content">
-      <mat-tab-group mat-stretch-tabs dynamicHeight color="accent">
-        <mat-tab label="Welcome"
-          ><app-welcome
-            [weddingDate]="weddingDate"
-            [countdown]="countdown$ | async"
-          ></app-welcome
-        ></mat-tab>
-        <mat-tab label="Shower"
-          ><app-shower
-            [showerDate]="showerDate"
-            [showerEndDate]="showerEndDate"
-          ></app-shower
-        ></mat-tab>
-        <mat-tab label="Registry"><app-registry></app-registry></mat-tab>
-      </mat-tab-group>
+      <nav mat-tab-nav-bar mat-stretch-tabs color="accent">
+        <a
+          mat-tab-link
+          *ngFor="let link of navLinks"
+          [routerLink]="[link.path | localize]"
+          [active]="isActive(link.path)"
+        >
+          {{ link.label }}
+        </a>
+      </nav>
+
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

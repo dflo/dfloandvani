@@ -1,4 +1,9 @@
-import { CommonModule, DatePipe, registerLocaleData } from '@angular/common';
+import {
+  CommonModule,
+  DatePipe,
+  Location,
+  registerLocaleData,
+} from '@angular/common';
 import {
   HttpClient,
   HttpClientModule,
@@ -10,10 +15,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import {
+  LocalizeParser,
+  LocalizeRouterModule,
+  LocalizeRouterSettings,
+  ManualParserLoader,
+} from '@gilsdav/ngx-translate-router';
+import {
+  TranslateLoader,
+  TranslateModule,
+  TranslateService,
+} from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LocalizedDatePipe } from './core/pipes/localized-data.pipe';
 import { BaseHttpInterceptor } from './core/services/base-https.interceptor';
@@ -35,16 +50,23 @@ import { WelcomeComponent } from './welcome/welcome.component';
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
     AngularSharedModule,
     HttpClientModule,
     TranslateModule.forRoot({
-      defaultLanguage: 'es',
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient],
       },
+    }),
+    AppRoutingModule,
+    LocalizeRouterModule.forRoot(routes, {
+      parser: {
+        provide: LocalizeParser,
+        useFactory: ParserFactory,
+        deps: [TranslateService, Location, LocalizeRouterSettings],
+      },
+      alwaysSetPrefix: true,
     }),
   ],
   providers: [
@@ -62,6 +84,21 @@ export class AppModule {
     registerLocaleData(localeEs, 'es');
     registerLocaleData(localeEn, 'en');
   }
+}
+
+export function ParserFactory(
+  translate: TranslateService,
+  location: Location,
+  settings: LocalizeRouterSettings,
+) {
+  return new ManualParserLoader(
+    translate,
+    location,
+    settings,
+    ['en', 'es'],
+    'ROUTES',
+    '!',
+  );
 }
 
 // required for AOT compilation
