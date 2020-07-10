@@ -34,8 +34,14 @@ export class AppComponent {
       localStorage.removeItem('path');
       const urlSegments = redirectPath.split('/').filter((s) => !!s);
 
-      if (['en', 'es'].includes(urlSegments[0])) {
-        this.router.navigateByUrl('/' + urlSegments.join('/'));
+      if (this.localize.parser.locales.includes(urlSegments[0])) {
+        if (urlSegments[0] !== this.localize.parser.currentLang) {
+          setTimeout(() => {
+            this.router.navigate(urlSegments);
+          });
+        } else {
+          this.router.navigate(urlSegments);
+        }
       } else {
         this.router.navigateByUrl('/');
       }
