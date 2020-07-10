@@ -28,7 +28,13 @@ export class AppComponent {
     private appMediaService: AppMediaService,
     private router: Router,
     private localize: LocalizeRouterService,
-  ) {}
+  ) {
+    const path = localStorage.getItem('path');
+    if (path) {
+      localStorage.removeItem('path');
+      this.router.navigate([path]);
+    }
+  }
 
   isActive(path: any) {
     path = this.localize.translateRoute(path);
