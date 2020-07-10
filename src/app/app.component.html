@@ -1,5 +1,12 @@
 <div class="background">
   <div class="page">
+    <mat-menu #langMenu="matMenu">
+      <button mat-menu-item (click)="useLanguage('en')">English</button>
+      <button mat-menu-item (click)="useLanguage('es')">Español</button>
+    </mat-menu>
+    <button class="lang-menu" mat-icon-button [matMenuTriggerFor]="langMenu">
+      <mat-icon>language</mat-icon>
+    </button>
     <header>
       <h1 class="bad-script mat-display-2">Damaso & Vanessa</h1>
     </header>

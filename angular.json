@@ -137,5 +137,8 @@
       }
     }
   },
-  "defaultProject": "dfloandvani"
+  "defaultProject": "dfloandvani",
+  "cli": {
+    "analytics": false
+  }
 }

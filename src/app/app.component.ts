@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { TranslateService } from '@ngx-translate/core';
 import { Observable, timer } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -26,7 +27,16 @@ export class AppComponent implements OnInit {
     return AppMedia;
   }
 
-  constructor(private appMediaService: AppMediaService) {}
+  constructor(
+    private appMediaService: AppMediaService,
+    private translate: TranslateService,
+  ) {
+    // this language will be used as a fallback when a translation isn't found in the current language
+    translate.setDefaultLang('es');
+
+    // the lang to use, if the lang isn't available, it will use the current loader to get them
+    translate.use('es');
+  }
 
   ngOnInit(): void {
     this.countdown$ = timer(0, 1000).pipe(
@@ -37,9 +47,13 @@ export class AppComponent implements OnInit {
           hours: Math.abs(Math.floor((diff / (1000 * 60 * 60)) % 24)),
           mins: Math.abs(Math.floor((diff / (1000 * 60)) % 60)),
           secs: Math.abs(Math.floor((diff / 1000) % 60)),
-          suffix: diff > 0 ? 'until we say "I do"' : 'Happily Married!',
+          suffix: diff > 0 ? 'engagedSuffix' : 'marriedSuffix',
         };
       }),
     );
+  }
+
+  useLanguage(language: string) {
+    this.translate.use(language);
   }
 }
