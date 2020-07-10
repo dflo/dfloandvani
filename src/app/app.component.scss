@@ -36,9 +36,14 @@
     max-width: 900px;
     width: 100%;
     margin: 0 auto;
-    padding: 64px 0;
+    padding: 24px 0 64px;
     background-color: whitesmoke;
     z-index: 10;
+
+    .lang-menu {
+      align-self: flex-end;
+      margin-right: 24px;
+    }
 
     header {
       // padding-top: 64px;

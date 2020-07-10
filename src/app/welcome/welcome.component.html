@@ -3,24 +3,27 @@
     <img class="rings" src="assets/rings.svg" />
     <div class="text">
       <h1 class="bad-script mat-display-1 title" i18n>
-        We are getting MARRIED!
+        {{ "welcome.title" | translate }}
       </h1>
-      <h1 class="wedding-date">{{ weddingDate | date: "fullDate" }}</h1>
+      <h1 class="wedding-date">
+        {{ weddingDate | localizedDate: "fullDate" }}
+      </h1>
     </div>
   </div>
 
   <img class="proposal" src="assets/welcome.jpg" />
 
   <h3 class="welcome" i18n>
-    Welcome and thank you for visiting our wedding website! Here you will find
-    all the information about our special day and any events leading up to it.
+    {{ "welcome.body" | translate }}
   </h3>
 
   <mat-divider></mat-divider>
 
   <h2 *ngIf="countdown" class="countdown" i18n>
-    {{ countdown.days }} Days {{ countdown.hours }} Hours
-    {{ countdown.mins }} Minutes {{ countdown.secs }} Seconds
-    {{ countdown.suffix }}
+    {{ countdown.days }} {{ "welcome.days" | translate }} {{ countdown.hours }}
+    {{ "welcome.hours" | translate }} {{ countdown.mins }}
+    {{ "welcome.mins" | translate }} {{ countdown.secs }}
+    {{ "welcome.secs" | translate }}
+    {{ "welcome." + countdown.suffix | translate }}
   </h2>
 </div>

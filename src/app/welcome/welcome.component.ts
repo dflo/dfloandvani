@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Countdown } from '../models/countdown';
 
@@ -7,11 +7,7 @@ import { Countdown } from '../models/countdown';
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss'],
 })
-export class WelcomeComponent implements OnInit {
+export class WelcomeComponent {
   @Input() countdown: Countdown;
   @Input() weddingDate: Date;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }
