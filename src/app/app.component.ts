@@ -29,10 +29,15 @@ export class AppComponent {
     private router: Router,
     private localize: LocalizeRouterService,
   ) {
-    const path = localStorage.getItem('path');
-    if (path) {
+    const redirectPath = localStorage.getItem('path');
+    if (redirectPath) {
+      console.log('path:', redirectPath);
       localStorage.removeItem('path');
-      this.router.navigate(path.split('/').filter((s) => !!s));
+      const urlSegments = redirectPath.split('/').filter((s) => !!s);
+      console.log('urlSegments', urlSegments);
+      const rootPath = '/' + urlSegments.join('/');
+      console.log('rootPath', rootPath);
+      this.router.navigate([rootPath]);
     }
   }
 
