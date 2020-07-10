@@ -1,0 +1,21 @@
+{
+    "welcome": {
+        "title": "Nos vamos a CASAR!",
+        "body": "¡Bienvenido y gracias por visitar nuestra página de web para la boda! Aquí encontrará toda la información sobre nuestro día especial.",
+        "days": "Dias",
+        "hours": "Horas",
+        "mins": "Minutos",
+        "secs": "Segundos",
+        "engagedSuffix": "hasta que digamos \"Si acepto!\"",
+        "marriedSuffix": "Felizmente Casado!"
+    },
+    "shower": {
+        "title": "Wedding Shower",
+        "intro": "Plan nuevo...",
+        "caution": "Por precaución de la salud y la seguridad de nuestros seres queridos, hemos decidido organizar un viaje en coche para entregar su regalo",
+        "drivethru": "Pasa por la casa para mostrar su amor y apoyo. Pueden considerar una tarjeta de regalo o una tarjeta electrónica, si no quieren comprar y transportar regalos. Gracias de antemano por su comprensión y generosidad."
+    },
+    "registry": {
+        "intro": "¡Su presencia en la boda es suficiente para nosotros! Pero, para aquellos de ustedes que son tercamente generosos, hemos detallado una lista de deseos ..."
+    }
+}
