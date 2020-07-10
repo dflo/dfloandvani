@@ -34,7 +34,7 @@ export class AppComponent {
       localStorage.removeItem('path');
       const urlSegments = redirectPath.split('/').filter((s) => !!s);
 
-      if (urlSegments[0] in ['en', 'es']) {
+      if (['en', 'es'].includes(urlSegments[0])) {
         this.router.navigateByUrl('/' + urlSegments.join('/'));
       } else {
         this.router.navigateByUrl('/');
