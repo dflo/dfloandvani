@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-shower',
@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./shower.component.scss'],
 })
 export class ShowerComponent {
-  @Input() showerDate: Date;
-  @Input() showerEndDate: Date;
+  showerDate = new Date(2020, 6, 26, 15, 0);
+  showerEndDate = new Date(2020, 6, 26, 18, 0);
 }

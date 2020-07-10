@@ -17,5 +17,9 @@
     },
     "registry": {
         "intro": "¡Su presencia en la boda es suficiente para nosotros! Pero, para aquellos de ustedes que son tercamente generosos, hemos detallado una lista de deseos ..."
+    },
+    "ROUTES": {
+        "shower": "shower",
+        "registry": "registry"
     }
 }

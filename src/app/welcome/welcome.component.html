@@ -19,7 +19,7 @@
 
   <mat-divider></mat-divider>
 
-  <h2 *ngIf="countdown" class="countdown" i18n>
+  <h2 *ngIf="countdown$ | async; let countdown" class="countdown" i18n>
     {{ countdown.days }} {{ "welcome.days" | translate }} {{ countdown.hours }}
     {{ "welcome.hours" | translate }} {{ countdown.mins }}
     {{ "welcome.mins" | translate }} {{ countdown.secs }}

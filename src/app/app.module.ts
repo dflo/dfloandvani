@@ -96,7 +96,8 @@ export function ParserFactory(
     location,
     settings,
     ['en', 'es'],
-    'YOUR_PREFIX',
+    'ROUTES',
+    '!',
   );
 }
 
