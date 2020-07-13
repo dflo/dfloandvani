@@ -1,0 +1,28 @@
+<div class="background">
+  <div class="page">
+    <mat-menu #langMenu="matMenu">
+      <button mat-menu-item (click)="onLanguageChange('en')">English</button>
+      <button mat-menu-item (click)="onLanguageChange('es')">Español</button>
+    </mat-menu>
+    <button class="lang-menu" mat-icon-button [matMenuTriggerFor]="langMenu">
+      <mat-icon>language</mat-icon>
+    </button>
+    <header>
+      <h1 class="bad-script mat-display-2">Damaso & Vanessa</h1>
+    </header>
+    <div class="content">
+      <nav mat-tab-nav-bar mat-stretch-tabs color="accent">
+        <a
+          mat-tab-link
+          *ngFor="let link of navLinks"
+          [routerLink]="[link.path | localize]"
+          [active]="isActive(link.path)"
+        >
+          {{ link.label }}
+        </a>
+      </nav>
+
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

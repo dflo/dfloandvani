@@ -48,11 +48,6 @@ export class AppComponent {
     }
   }
 
-  isActive(path: any) {
-    path = this.localize.translateRoute(path);
-    return this.router.isActive(path, true);
-  }
-
   useLanguage(language: string) {
     const urlSegments = this.router.url.split('/').filter((s) => !!s);
     if (urlSegments[0] !== language) {

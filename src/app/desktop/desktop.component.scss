@@ -1,0 +1,42 @@
+@import "helpers";
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  background-color: $primary;
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 60px;
+    padding: 24px 0 64px;
+    background-color: whitesmoke;
+    z-index: 10;
+
+    .lang-menu {
+      align-self: flex-end;
+      margin-right: 24px;
+    }
+
+    header {
+      text-align: center;
+
+      .mat-display-2 {
+        margin-bottom: 32px;
+      }
+    }
+
+    .content {
+      flex-grow: 1;
+      padding: 0 48px;
+    }
+  }
+}

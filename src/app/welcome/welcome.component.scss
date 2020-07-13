@@ -34,12 +34,14 @@
 
   @include for-sm {
     height: 50px;
+    width: 50px;
   }
 
   @include for-gt-sm {
     grid-column: 1;
     grid-row: 1;
     height: 100px;
+    width: 100px;
     align-self: center;
     justify-self: center;
   }
@@ -60,9 +62,15 @@ h1.wedding-date {
   margin-bottom: 0;
 }
 
-img.proposal {
+.proposal {
   width: 100%;
-  height: auto;
+  // height: auto;
+  // min-height: 100vw;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 h3.welcome {

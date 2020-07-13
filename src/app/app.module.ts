@@ -32,10 +32,14 @@ import { AppRoutingModule, routes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LocalizedDatePipe } from './core/pipes/localized-data.pipe';
 import { BaseHttpInterceptor } from './core/services/base-https.interceptor';
+import { DesktopComponent } from './desktop/desktop.component';
+import { MobileComponent } from './mobile/mobile.component';
 import { RegistryComponent } from './registry/registry.component';
+import { RingsGraphicComponent } from './rings-graphic/rings-graphic.component';
 import { AngularSharedModule } from './shared/angular-shared.module';
 import { ShowerComponent } from './shower/shower.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { CarGraphicComponent } from './car-graphic/car-graphic.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +48,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
     RegistryComponent,
     ShowerComponent,
     LocalizedDatePipe,
+    DesktopComponent,
+    MobileComponent,
+    RingsGraphicComponent,
+    CarGraphicComponent,
   ],
   imports: [
     // Core

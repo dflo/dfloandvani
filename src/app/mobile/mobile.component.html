@@ -1,0 +1,14 @@
+<mat-toolbar>
+  <button mat-icon-button><mat-icon>menu</mat-icon></button>
+  <mat-menu #langMenu="matMenu">
+    <button mat-menu-item (click)="onLanguageChange('en')">English</button>
+    <button mat-menu-item (click)="onLanguageChange('es')">Español</button>
+  </mat-menu>
+  <button class="lang-menu" mat-icon-button [matMenuTriggerFor]="langMenu">
+    <mat-icon>language</mat-icon>
+  </button>
+</mat-toolbar>
+<h1 class="bad-script mat-display-2">Damaso & Vanessa</h1>
+<div class="mobile-content">
+  <router-outlet></router-outlet>
+</div>
