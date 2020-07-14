@@ -1,6 +1,7 @@
 <ng-container *ngIf="appMedia$ | async; let appMedia">
   <app-mobile
     *ngIf="appMedia === AppMedia.Mobile; else desktop"
+    [navLinks]="navLinks"
     (languageChange)="useLanguage($event)"
   ></app-mobile>
   <ng-template #desktop>

@@ -1,5 +1,25 @@
 @import "variables";
 
+@mixin set-height-to-fill-screen($use-min: false) {
+  $gt-xs: 600px;
+  $header-height-on-xsmall: 56px;
+  $header-height-on-gt-xs: 64px;
+
+  @if $use-min {
+    min-height: calc(100% - #{$header-height-on-xsmall});
+
+    @media only screen and (min-width: $gt-xs) {
+      min-height: calc(100% - #{$header-height-on-gt-xs});
+    }
+  } @else {
+    height: calc(100% - #{$header-height-on-xsmall});
+
+    @media only screen and (min-width: $gt-xs) {
+      height: calc(100% - #{$header-height-on-gt-xs});
+    }
+  }
+}
+
 @mixin rotate($deg) {
   -webkit-transform: rotate($deg);
   -moz-transform: rotate($deg);

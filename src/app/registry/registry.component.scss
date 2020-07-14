@@ -28,7 +28,7 @@ a {
   }
 }
 
-:host-context(.mobile-content) a {
+:host-context(mat-sidenav-content) a {
   width: 100%;
   margin: 10px 0;
   background-color: $white-opacity-87;

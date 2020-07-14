@@ -9,6 +9,6 @@ svg {
   width: 100%;
 }
 
-:host-context(.mobile-content) path {
+:host-context(mat-sidenav-content) path {
   fill: $white-opacity-87;
 }

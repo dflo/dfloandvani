@@ -30,6 +30,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule, routes } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CarGraphicComponent } from './car-graphic/car-graphic.component';
 import { LocalizedDatePipe } from './core/pipes/localized-data.pipe';
 import { BaseHttpInterceptor } from './core/services/base-https.interceptor';
 import { DesktopComponent } from './desktop/desktop.component';
@@ -39,7 +40,6 @@ import { RingsGraphicComponent } from './rings-graphic/rings-graphic.component';
 import { AngularSharedModule } from './shared/angular-shared.module';
 import { ShowerComponent } from './shower/shower.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { CarGraphicComponent } from './car-graphic/car-graphic.component';
 
 @NgModule({
   declarations: [

@@ -70,6 +70,7 @@ h1.wedding-date {
   img {
     width: 100%;
     height: auto;
+    border-radius: 25px;
   }
 }
 
@@ -80,4 +81,8 @@ h3.welcome {
 
 mat-divider {
   margin: 32px auto;
+}
+
+:host-context(mat-sidenav-content) mat-divider {
+  border-top-color: $white-opacity-38;
 }
