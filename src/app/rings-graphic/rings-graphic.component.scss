@@ -1,0 +1,14 @@
+@import "helpers";
+
+:host {
+  display: inline-block;
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+}
+
+:host-context(mat-sidenav-content) path {
+  fill: $white-opacity-87;
+}

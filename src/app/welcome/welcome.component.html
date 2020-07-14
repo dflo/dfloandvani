@@ -1,6 +1,6 @@
 <div class="content">
   <div class="subheader">
-    <img class="rings" src="assets/rings.svg" />
+    <app-rings-graphic class="rings"></app-rings-graphic>
     <div class="text">
       <h1 class="bad-script mat-display-1 title" i18n>
         {{ "welcome.title" | translate }}
@@ -11,7 +11,9 @@
     </div>
   </div>
 
-  <img class="proposal" src="assets/welcome.jpg" />
+  <div class="proposal">
+    <img src="assets/welcome.jpg" />
+  </div>
 
   <h3 class="welcome" i18n>
     {{ "welcome.body" | translate }}

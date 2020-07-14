@@ -1,0 +1,57 @@
+@import "helpers";
+
+:host {
+  display: block;
+  height: 100%;
+  background-color: $primary;
+  color: $white-opacity-87;
+}
+
+mat-toolbar {
+  background-color: $white-opacity-10;
+  color: $white-opacity-87;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+
+  mat-menu {
+    flex: 1 0 auto;
+  }
+}
+
+.mat-display-2 {
+  margin: 32px 0;
+  text-align: center;
+}
+
+mat-sidenav-container {
+  color: inherit;
+  background-color: inherit;
+  @include set-height-to-fill-screen(true);
+}
+
+:host ::ng-deep mat-sidenav {
+  background-color: $primary;
+
+  .mat-drawer-inner-container {
+    background-color: $white-opacity-10;
+  }
+}
+
+mat-nav-list.mat-nav-list {
+  .mat-list-item {
+    color: $white-opacity-87;
+    margin: 5px 0;
+    padding: 0 35px;
+    box-sizing: border-box;
+
+    &.active {
+      background-color: $white-opacity-10;
+    }
+  }
+}
+
+mat-sidenav-content {
+  padding: 0 24px 24px;
+}
