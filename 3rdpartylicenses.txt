@@ -60,6 +60,9 @@ MIT
 @angular/core
 MIT
 
+@angular/forms
+MIT
+
 @angular/localize
 MIT
 
